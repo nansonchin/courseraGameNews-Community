@@ -1,0 +1,20 @@
+.game-detail-big-image {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 70%;
+}
+
+.gameSwiper {
+    position: relative;
+}
+
+.game-detail-container {
+    background-color: #2E2E2E;
+}
+
+.game-detailswiper-section {
+    position: absolute;
+    width: 100%;
+    bottom: -5%;
+}

@@ -1,0 +1,28 @@
+.home-category-rectangle{
+    background-color: #FF0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px;
+    transition: .2s ease-in-out;
+}
+
+.home-category-rectangle:hover{
+    background-color: #FFF9F9;
+    transition: .2s ease-in-out;
+}
+
+.home-category-rectangle:hover >.category-text{
+    color:#FF0000;
+    font-weight: bold;
+}
+
+.category-text{
+    transition: .2s ease-in-out;
+    text-transform: uppercase;
+    padding: 2px;
+    margin: auto;
+    color:#FFF9F9;
+    font-size:14px ;
+}

@@ -1,0 +1,37 @@
+.newDetail-background{
+    position: relative;
+}
+
+.newsDetails-esport-img{
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    height: 40vh;
+    filter: blur(2px);
+}
+
+.newDetails-text-container{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.news-details-title{
+    font-size: 50px;
+    color:#FF0000;
+
+}
+
+.news-details-titleSpan{
+    color:#FFF9F9;
+}
+
+.newDetail-Detail-section{
+    background-color: #2E2E2E;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,22 @@
+
+.more-details-text{
+    color: #A1A1A1;
+    font-size: 20px;
+}
+
+.triangle{
+    background-color:#d40202;
+    margin: 5px;
+    height: 25px;
+    width: 25px;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    transition:.1s ease-in
+}
+
+.more-details-container:hover >.more-details-text{
+    color: #dadada;
+    font-weight: bold;
+}
+.more-details-container:hover >.triangle {
+   background-color: #FF0000;
+}

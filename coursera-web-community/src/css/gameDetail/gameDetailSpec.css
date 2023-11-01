@@ -1,0 +1,89 @@
+.gameDetailSpec-container {
+    padding: 100px 0px;
+
+}
+
+.game-Spec-border {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #2E2E2E;
+    border: 2px solid #707070;
+    border-radius: 34px;
+    padding-top: 25px;
+}
+
+.game-Spec-border>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.gameDetailSpec-title {
+    color: #FFF9F9;
+    font-size: 50;
+    text-transform: uppercase;
+}
+
+.gameDetailSpec-titleSpan {
+    color: #FF0000;
+}
+
+.spec-title {
+    color: #FFF9F9;
+    font-size: 30px;
+}
+
+.spec-desc {
+    color: #FFF9F9;
+    font-size: 15px;
+}
+
+.game-spec-wrapper {
+    padding: 5px;
+}
+
+.gameDetail-officeBtn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 100px;
+}
+
+.gameDetail-Recommmend-container {
+    border: 2px solid #707070;
+    border-radius: 17px;
+    margin-top: 50px;
+}
+
+
+.gameDetail-Recommend {
+    margin-top: 20px;
+    color: #FFF9F9;
+    font-size: 25px;
+
+}
+
+.gameDetail-game-img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 80px;
+}
+
+.game-DetailTitle {
+    font-weight: bold;
+}
+
+.game-Detail-Rec-Image-container {
+    margin: 15px 0px;
+    position: relative;
+}
+
+.game-detail-rec-text-container {
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    color: #FFF9F9;
+    background-image: linear-gradient(to right, #1c1c1c70, #272727);
+}

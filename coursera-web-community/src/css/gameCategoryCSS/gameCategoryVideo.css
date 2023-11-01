@@ -1,0 +1,36 @@
+.game-Category-video-container{
+    margin-top: 30px;
+}
+
+.game-category-video-wrapper{
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.game-category-image{
+    max-width: 100%;
+    width: 100%;
+}
+
+.game-category-title{
+    font-size:25px ;
+    color:#FFF9F9;
+}
+.game-category-text{
+    color:#A1A1A1;
+    font-size: 16px;
+}
+.game-category-imageDesc-container{
+    position: absolute;
+    transition:.2s ease-in;
+    padding: 10px;
+    background-color: #222222;
+}
+
+.game-category-video-wrapper:hover >.game-category-imageDesc-container{
+    
+    bottom:0;
+    transition:.2s ease-in;
+
+}

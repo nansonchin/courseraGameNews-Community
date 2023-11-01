@@ -1,0 +1,18 @@
+.new-detail-desc-image{
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.new-Detail-desc-image-container{
+    margin-top: 50px;
+}
+
+.new-Detail-desc-text-container{
+    margin-top: 50px;
+}
+
+.new-details-desc-text{
+    font-size: 25px;
+    color:#A1A1A1;
+}

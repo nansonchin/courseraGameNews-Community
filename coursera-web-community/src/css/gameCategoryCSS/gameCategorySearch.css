@@ -1,0 +1,56 @@
+
+.game-category-filter{
+    text-transform: uppercase;
+    color:#FFF9F9;
+    font-size: 40px;
+}
+.game-category-text-field-container{
+    margin-top: 100px;
+}
+
+.game-category-text-field-container-2ndstage{
+    margin-top: 30px;
+}
+
+.game-category-text-field-container-3rdstage{
+    margin-top: 10px;
+}
+
+.game-category-fiRedText{
+    color:#FF0000;
+}
+
+.game-category-search{
+    width: 100%;
+    border-radius: 11px;
+    font-size:25px ;
+    padding: 5px;
+}
+
+.game-category-date{
+    color:#FFF9F9;
+    font-size:25px ;
+    text-transform: uppercase;
+}
+
+.game-category-date{
+    width: 100%;
+    border-radius: 11px;
+}
+
+.game-category-searchCategory-container{
+    display: flex;
+    justify-content: center ;
+}
+
+.game-category-search-text{
+    padding: 0px 20px;
+    margin:10px 0px;
+color:#A1A1A1;
+font-size: 25px;
+}
+
+.game-category-serchField{
+    width: 100%;
+    border-radius: 5px;
+}

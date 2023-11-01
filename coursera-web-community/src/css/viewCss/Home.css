@@ -1,0 +1,10 @@
+.gameMenu-section,.home-sponsor-section{
+    background: #474646;
+}
+.sectionNewsTitle-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.home-news-mrBtn-container{
+    margin-top: 50px;
+}

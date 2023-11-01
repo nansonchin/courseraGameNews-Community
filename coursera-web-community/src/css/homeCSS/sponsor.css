@@ -1,0 +1,23 @@
+.sponsor-container{
+    padding:100px 000px;
+}
+.Sponsor-title{
+    
+    color:#C6C6C6;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.sponsor-img{
+    height: 100px;
+    width: 150px;
+    margin: 5px;
+}
+
+.sponsor-img-container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}

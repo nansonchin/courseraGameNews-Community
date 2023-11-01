@@ -1,0 +1,13 @@
+.spaceRectangle{
+background-color:#222222 ;
+width:20px;
+height:32px;
+}
+
+@media (max-width:555px){
+    .spaceRectangle{
+        background-color:#222222 ;
+        width:15px;
+        height:22px;
+        }
+}

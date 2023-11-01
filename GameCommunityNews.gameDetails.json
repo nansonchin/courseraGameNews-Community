@@ -1,0 +1,28 @@
+[{
+  "gamebgImg": "https://dotesports.com/wp-content/uploads/2023/10/apexconduit.jpg?w=1200",
+  "gameDetail": {
+    "gameImg": "https://assets-prd.ignimgs.com/2023/02/16/apexrevelry-1676588335122.jpg",
+    "gamesub": {
+      "gimg1": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg?t=1698424728",
+      "gimg2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs_G7co7winQFSkLVE4XCeIs2ZyQsTi0nwiHErwkSXTgj8g3XS_8AUzJBa0NuybP1hjVc&usqp=CAU",
+      "gimg3": "https://esi.si.com/.image/t_share/MTk3NDExMzcwNDExNTAxNDY3/apex-bunch-of-legends.png",
+      "gimg4": "https://www.eclypsia.com/wp-content/uploads/eclypsia/2023/01/apex.jpg"
+    },
+    "gameDetailTitle": "Apex Legend",
+    "gameDetailText": "Apex Legends is a free-to-play hero shooter game where legendary competitors battle for glory, fame, and fortune on the fringes of the Frontier."
+  },
+  "gameSpecContainer": {
+    "minSpec": {
+      "mpsec1": "64-bit Windows 10",
+      "mpsec2": "Intel Core i3-6300 3.8GHz / AMD FX-4350 4.2 GHz Quad-Core Processor",
+      "mpsec3": "NVIDIA GeForce GT 640 / Radeon HD 7730",
+      "mpsec4": "6GB"
+    },
+    "recSpec": {
+      "rspec1": "64-bit Windows 10",
+      "rspec2": "Intel i5 3570K or equivalent",
+      "rspec3": "Nvidia GeForce GTX 970 / AMD Radeon R9 290",
+      "rspec4": "8GB"
+    }
+  }
+}]
