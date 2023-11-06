@@ -22,7 +22,7 @@
         </div>
 
         <div class="gameDetail-SepcIntro-section">
-            <gameSpecRec/>
+            <gameSpecRec :gameSpec="gamesData_array.gameSpecContainer" :gameRandom="gameRandomData_array"/>
         </div>
     </div>
     <div class="footer-section">
@@ -46,26 +46,39 @@ export default {
         return{
             gamesId:this.$route.params.games,
             config:{
-                url1:'http://localhost:9999/api/game/',
+                url1:'http://localhost:9999/api/game',
             },
             gamesData_array:{},
+            gameRandomData_array:{}
         };
     },
     methods:{
         getData(){
             const data=axios({
-                url:this.config.url1+this.gamesId,
+                url:this.config.url1+"/"+this.gamesId,
                 method:'get',
             });
             data.then((response)=>{
                 var data =response.data
                 this.gamesData_array=data;
-                console.log(this.gamesData_array)
+                console.log(this.gamesData_array ," This is game Specific ID Data")
+            })
+        },
+        getRandomData(){
+            const data=axios({
+                url:this.config.url1,
+                method:'get',
+            });
+            data.then((response)=>{
+                var data =response.data
+                this.gameRandomData_array=data.slice(0,4);
+                console.log(this.gameRandomData_array ," This is game Random ID Data")
             })
         }
     },
     created(){
-        this.getData()
+        this.getData(),
+        this.getRandomData()
     },
 }
 </script>

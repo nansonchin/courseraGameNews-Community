@@ -3,17 +3,23 @@
         <div class="container">
             <div class="header-box">
                 <div class="header-title-container">
-                    <p class="header-text">HOME</p>
+                    <a :href="'/'" class="header-href">
+                        <p class="header-text">HOME</p>
+                    </a>
                 </div>
                 <div class="header-title-container">
+                    <a :href="'/gameCategory'" class="header-href">
                     <p class="header-text ">GAMES</p>
+                    </a>
                 </div>
                 <img :src="headerglass" class="headerglass" />
                 <div class="header-title-container">
                     <p class="header-text">NEWS</p>
                 </div>
                 <div class="header-title-container">
+                    <a :href="'/signinup'" class="header-href">
                     <p class="header-text ">SIGN IN/UP</p>
+                    </a>
                 </div>
             </div>
             <p class="header-text header-search">Search</p>

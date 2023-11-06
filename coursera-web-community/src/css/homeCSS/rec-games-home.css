@@ -110,6 +110,11 @@
 
 .other-game-rec-text-desc{
     color:#A1A1A1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .other-game-rec-more{

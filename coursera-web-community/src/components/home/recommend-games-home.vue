@@ -17,75 +17,19 @@
                 </div>
                 <div class="col-md-12 col-lg-6 col-sm-12">
                     <div class="side-container">
-                        <div class="other-game-rec-side-container">
-                            <img src="@/assets/image/isoside.png" class="other-game-rec-side-img" />
+                        <div class="other-game-rec-side-container" v-for="(gameData, key) in _allGamesRecommend" :key="key">
+                            
+                            <img :src="gameData.gamebgImg" class="other-game-rec-side-img" />
                             <div class="other-game-rec-side-desc-container">
-                                <h3 class="other-game-rec-title">Game Name</h3>
-                                <p class="other-game-rec-text-desc">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                                    the
-                                    1500s </p>
-                                <p class="other-game-rec-more">More</p>
+                                <h3 class="other-game-rec-title">{{gameData.gameDetail.gameDetailTitle}}</h3>
+                                <p class="other-game-rec-text-desc">{{ gameData.gameDetail.gameDetailText }}</p>
+                                <a :href="'/game/' + gameData._id" class="header-href">
+                                    <p class="other-game-rec-more">More</p>
+                                </a>
                             </div>
                         </div>
-                        <div class="other-game-rec-side-container">
-                            <img src="@/assets/image/isoside.png" class="other-game-rec-side-img" />
-                            <div class="other-game-rec-side-desc-container">
-                                <h3 class="other-game-rec-title">Game Name</h3>
-                                <p class="other-game-rec-text-desc">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                                    the
-                                    1500s </p>
-                                <p class="other-game-rec-more">More</p>
-                            </div>
-                        </div>
-                        <div class="other-game-rec-side-container">
-                            <img src="@/assets/image/isoside.png" class="other-game-rec-side-img" />
-                            <div class="other-game-rec-side-desc-container">
-                                <h3 class="other-game-rec-title">Game Name</h3>
-                                <p class="other-game-rec-text-desc">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                                    the
-                                    1500s </p>
-                                <p class="other-game-rec-more">More</p>
-                            </div>
-                        </div>
-                        <div class="other-game-rec-side-container">
-                            <img src="@/assets/image/isoside.png" class="other-game-rec-side-img" />
-                            <div class="other-game-rec-side-desc-container">
-                                <h3 class="other-game-rec-title">Game Name</h3>
-                                <p class="other-game-rec-text-desc">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                                    the
-                                    1500s </p>
-                                <p class="other-game-rec-more">More</p>
-                            </div>
-                        </div>
-                        <div class="other-game-rec-side-container">
-                            <img src="@/assets/image/isoside.png" class="other-game-rec-side-img" />
-                            <div class="other-game-rec-side-desc-container">
-                                <h3 class="other-game-rec-title">Game Name</h3>
-                                <p class="other-game-rec-text-desc">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                                    the
-                                    1500s </p>
-                                <p class="other-game-rec-more">More</p>
-                            </div>
-                        </div>
-                        <div class="other-game-rec-side-container">
-                            <img src="@/assets/image/isoside.png" class="other-game-rec-side-img" />
-                            <div class="other-game-rec-side-desc-container">
-                                <h3 class="other-game-rec-title">Game Name</h3>
-                                <p class="other-game-rec-text-desc">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                                    the
-                                    1500s </p>
-                                <p class="other-game-rec-more">More</p>
-                            </div>
-                        </div>
-
                     </div>
-                 <moreBtn/>
+                 <moreBtn :direct="'/gameCategory'"/>
                 </div>
             </div>
         </div>
@@ -96,6 +40,13 @@ import moreBtn from '@/components/home/morebtn.vue'
 </script>
 <script>
 export default {
-    name: "rec-games-home-pages"
+    name: "rec-games-home-pages",
+    props:{
+        _allGamesRecommend:{
+            type:Array,
+            default:()=>[]
+        }
+
+    }
 }
 </script>

@@ -70,6 +70,10 @@
     top:0%;
 }
 
+.header-href{
+    text-decoration: none;
+}
+
 @media (max-width:920px) {
     .header-container {
         display: none;

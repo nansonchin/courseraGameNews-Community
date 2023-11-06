@@ -1,28 +1,32 @@
-[{
-  "gamebgImg": "https://dotesports.com/wp-content/uploads/2023/10/apexconduit.jpg?w=1200",
-  "gameDetail": {
-    "gameImg": "https://assets-prd.ignimgs.com/2023/02/16/apexrevelry-1676588335122.jpg",
-    "gamesub": {
-      "gimg1": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg?t=1698424728",
-      "gimg2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs_G7co7winQFSkLVE4XCeIs2ZyQsTi0nwiHErwkSXTgj8g3XS_8AUzJBa0NuybP1hjVc&usqp=CAU",
-      "gimg3": "https://esi.si.com/.image/t_share/MTk3NDExMzcwNDExNTAxNDY3/apex-bunch-of-legends.png",
-      "gimg4": "https://www.eclypsia.com/wp-content/uploads/eclypsia/2023/01/apex.jpg"
+[
+  {
+    "gamebgImg": "https://imageio.forbes.com/specials-images/imageserve/641b3572386c48aa680aff98/Counter-Strike-2-Limited-Test-Logo/960x0.jpg?format=jpg&width=960",
+    "gameDetail": {
+      "gameImg": "https://i.ytimg.com/vi/cQBx02-zXdE/maxresdefault.jpg",
+      "gamesub": {
+        "gimg1": "https://www.nme.com/wp-content/uploads/2023/03/Counter-Strike-2-AWP.jpg",
+        "gimg2": "https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/03/23/ezgif-3-ba3a68b0e1.jpg",
+        "gimg3": "https://gameranx.com/wp-content/uploads/2023/10/what-is-tick-rate-in-counter-strike-2.jpg",
+        "gimg4": "https://insider-gaming.com/wp-content/uploads/2023/03/CSGOFeatured.jpg"
+      },
+      "gameDetailTitle": "Counter Strike GO 2",
+      "gameDetailText":"Counter-Strike 2 is a 2023 multiplayer tactical first-person shooter game developed and published by Valve. It is the fifth main installment of the Counter-Strike series. Developed as an updated version of the previous main entry, Counter-Strike: Global Offensive (2012), it was announced on March 22, 2023 and was released on September 27, 2023, replacing Global Offensive on Steam.
+      Like its predecessor, the game pits two teams, the Counter-Terrorists and the Terrorists, against each other in various objective-based gamemodes. Counter-Strike 2 features major technical improvements over Global Offensive, including a move from the Source game engine to Source 2, improved graphics and new server architecture. In addition, many maps from Global Offensive were updated to use the features of Source 2, with some maps receiving complete overhauls.  
+      Upon release, Counter-Strike 2 received generally favorable reviews from critics. In contrast, player reception was mixed; criticism was directed at the delisting of Global Offensive from Steam, degraded game performance, and the removal of several features that had been present in Global Offensive. As a result, Counter-Strike 2 received hundreds of negative user reviews on Steam, leading to it becoming one of the lowest-rated Valve titles on the platform." 
     },
-    "gameDetailTitle": "Apex Legend",
-    "gameDetailText": "Apex Legends is a free-to-play hero shooter game where legendary competitors battle for glory, fame, and fortune on the fringes of the Frontier."
-  },
-  "gameSpecContainer": {
-    "minSpec": {
-      "mpsec1": "64-bit Windows 10",
-      "mpsec2": "Intel Core i3-6300 3.8GHz / AMD FX-4350 4.2 GHz Quad-Core Processor",
-      "mpsec3": "NVIDIA GeForce GT 640 / Radeon HD 7730",
-      "mpsec4": "6GB"
-    },
-    "recSpec": {
-      "rspec1": "64-bit Windows 10",
-      "rspec2": "Intel i5 3570K or equivalent",
-      "rspec3": "Nvidia GeForce GTX 970 / AMD Radeon R9 290",
-      "rspec4": "8GB"
+    "gameSpecContainer": {
+      "minSpec": {
+        "mpsec1": "up to Windows 11 ",
+        "mpsec2": "Intel Core i5-750",
+        "mpsec3": " NVIDIA GeForce 610M",
+        "mpsec4": " 8 GB"
+      },
+      "recSpec": {
+        "rspec1": "Windows 10",
+        "rspec2": " Intel Core i7-9700K",
+        "rspec3": "NVIDIA GeForce RTX 2070",
+        "rspec4": "16 GB"
+      }
     }
   }
-}]
+]

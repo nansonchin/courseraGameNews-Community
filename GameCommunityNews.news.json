@@ -1,12 +1,12 @@
 [{
-  "title": "News 2",
-  "descImg": "https://assets.nst.com.my/images/articles/esport290923_1695987879.jpg",
+  "title": "News 4",
+  "descImg": "https://cdn.oneesports.gg/cdn-data/2021/08/Zowie_paperrex-1024x576.jpg",
   "descText": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "side": {
     "sideNews": {
-      "sideTitle": "New Side 2",
-      "sideDesc": "abc abc side side2 ...",
-      "sideImg": "https://t4.ftcdn.net/jpg/05/70/24/67/360_F_570246739_Kg1bu2gzoCYziBgt0KqKYi9HJPm8Ndqz.jpg"
+      "sideTitle": "New Side 4",
+      "sideDesc": "abc abc side side4 ...",
+      "sideImg": "https://cms.upcomer.com/wp-content/uploads/2022/03/51930288069_f1809d9fc3_k-e1646932557169.jpg"
     },
     "sideCategory": {
       "cat1": "Sport",
@@ -14,10 +14,10 @@
       "cat3": "Strategy"
     },
     "sideGallery": {
-      "img1": "https://weezevent.com/wp-content/uploads/2018/10/15140712/compet_esport.jpg",
-      "img2": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXNwb3J0fGVufDB8fDB8fHww",
-      "img3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfJ_6e1TGGmmrcak8aum0VgtAvBnwU7sA3T1cyNt7lTYtD2MRJZRbD_-XwwPO6LXYJ_v8&usqp=CAU",
-      "img4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQHAKiuq82ze5n2feQnWtCdh7K5nAYnVNH5es5XgTNh5wQuWt6THuFc3XagMOuWR0f_s&usqp=CAU"
+      "img1": "https://sm.ign.com/ign_in/screenshot/default/valorant-champions-tour-2023-teams-feature_24kk.jpg",
+      "img2": "https://prod.assets.earlygamecdn.com/images/vct-masters-copenhagen-crowd-768x512.jpg?transform=article_webp",
+      "img3": "https://cdn.sanity.io/images/zoz4y99f/production/c0fb1f5dd041c7954ab5f4b0d8aaf91aaefe82fa-1600x900.jpg?w=1600&auto=format",
+      "img4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq_Gjl8i3q_BPlQac2nIAbgfyjlY63403vmw&usqp=CAU"
     }
   }
 }]

@@ -9,7 +9,7 @@
 
   <div class="gameMenu-section">
     <SectionMenu :sectionMenuTitle="'GAMES'"></SectionMenu>
-    <recGameHome />
+    <recGameHome :_allGamesRecommend="allGamesData_array"/>
   </div>
 
   <div class="newsMenu-section">
@@ -18,14 +18,8 @@
       <swiper :slidesPerView="slide" :spaceBetween="0" :freeMode="true" :pagination="{
         clickable: true,
       }" :modules="modules" class="mySwiper">
-        <swiper-slide>
-          <recNewsHome />
-        </swiper-slide>
-        <swiper-slide>
-          <recNewsHome />
-        </swiper-slide>
-        <swiper-slide>
-          <recNewsHome />
+        <swiper-slide v-for="(allNewsData,key) in allNewsData_array" :key="key">
+          <recNewsHome :_allNewsRecommend="allNewsData" :index="key"/>
         </swiper-slide>
       </swiper>
     </div>
@@ -62,17 +56,14 @@ import Footer from "@/components/footer.vue"
 </script>
 
 <script>
+//Import Axios for Intergration Data
+import axios from 'axios';
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
-
 // Import Swiper styles
 import 'swiper/css';
-
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-
-
-
 // import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
 
@@ -81,6 +72,11 @@ export default {
   data() {
     return {
       slide: 3,
+      config:{
+        url1:'http://localhost:9999/api/all'
+      },
+      allGamesData_array:{},
+      allNewsData_array:{},
     }
   },
   components: {
@@ -111,11 +107,24 @@ export default {
       else {
         this.slide = '3';
       }
+    },
+    getData(){
+      const data=axios({
+        url:this.config.url1,
+        method:'get',
+      });
+      data.then((response)=>{
+        var data=response.data
+        this.allGamesData_array=data.allGames;
+        this.allNewsData_array=data.allNews;
 
+        console.log(this.allNewsData_array,this.allGamesData_array);
+      })
     }
   },
   created() {
     this.getDimensions();
+    this.getData();
   }
 };
 </script>

@@ -62,6 +62,7 @@ export default {
                     console.log(this.newsData_array.side);
             })
         },
+        
     },
     created() {
         this.getData()

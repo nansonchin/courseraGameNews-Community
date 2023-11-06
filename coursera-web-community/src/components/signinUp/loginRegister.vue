@@ -7,10 +7,11 @@
                     :class="{ 'reduced-width': isClickedRegister, 'increasedWidth': isClickedLogin }">
                     <img src="@/assets/image/login.jpg" class="login-img" />
                     <div class="gray-container">
-                        <h3 class="signinup-title login-title" 
-                        :class="{'vertical-text-login':isClickedRegister, 
-                        'move-text': isClickedLogin }">Login</h3>
-                        <div class="login-textField" v-if=" isClickedLogin">
+                        <h3 class="signinup-title login-title" :class="{
+                            'vertical-text-login': isClickedRegister,
+                            'move-text': isClickedLogin
+                        }">Login</h3>
+                        <div class="login-textField" v-if="isClickedLogin" @click.stop>
                             <form>
                                 <input type="text" placeholder="Username" class="login-username"><br>
                                 <input type="text" placeholder="Password" class="login-password"><br>
@@ -35,27 +36,26 @@
                     :class="{ 'reduced-width': isClickedLogin, 'increasedWidth': isClickedRegister }">
                     <img src="@/assets/image/register.jpeg" class="login-img" />
                     <div class="gray-container">
-                        <h3  class="signinup-title register-title"
-                        :class="{ 'vertical-text-register': isClickedLogin, 
-                        'move-text': isClickedRegister }">Register
+                        <h3 class="signinup-title register-title" :class="{
+                            'vertical-text-register': isClickedLogin,
+                            'move-text': isClickedRegister
+                        }">Register
                         </h3>
-                        <div class="register-textField" v-if=" isClickedRegister">
-                            <form>
-                                <input type="text" placeholder="Username" class="register-username"><br>
-                                <input type="text" placeholder="Password" class="register-password"><br>
-                                <input type="text" placeholder="Confirm Password" class="register-password"><br>
-                                <input type="text" placeholder="Email" class="register-password"><br>
+                        <div class="register-textField" v-if="isClickedRegister" @click.stop>
+                            <form @submit.prevent="registerUser">
+                                <input v-model="submitUser.username" type="text" placeholder="Username"
+                                    class="register-username"><br>
+                                <input v-model="submitUser.password" type="text" placeholder="Password"
+                                    class="register-password"><br>
+                                <input v-model="submitUser.password2nd" type="text" placeholder="Confirm Password"
+                                    class="register-password"><br>
+                                <input v-model="submitUser.email" type="text" placeholder="Email"
+                                    class="register-password"><br>
                                 <input type="checkbox" class="login-remember">
                                 <label class="login-remember-text">I Agree to the term & Condition</label>
                                 <br>
                                 <div class="login-btn-container">
-                                    <button type="button" class="btn btn-danger login-btn">Login</button>
-                                </div>
-                                <div class="thirdPartyLogin">
-                                    <p class="thirdParty-text">OR LOGIN WITH:</p>
-                                    <div class="third-partyLogin-icon-container">
-                                        <img src="@/assets/image/fb.png" class="third-party-icon-img" />
-                                    </div>
+                                    <button type="submit" class="btn btn-danger login-btn">Register</button>
                                 </div>
                             </form>
 
@@ -67,6 +67,8 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
+
 
 export default {
     name: 'signInUp-page',
@@ -74,6 +76,13 @@ export default {
         return {
             isClickedLogin: false,
             isClickedRegister: false,
+            submitUser: {
+                username: '',
+                password: '',
+                password2nd: '',
+                email: '',
+            },
+
         };
     },
     methods: {
@@ -86,7 +95,23 @@ export default {
                 this.isClickedLogin = false;
             }
         },
+        async registerUser() {
+
+            const response = await axios.post('http://localhost:9999/api/register', this.submitUser);
+            console.log("Checking Resonse :" ,response);
+            if (response.status === 403) {
+                alert('User with the same username already exists. Please choose a different username.');
+            } else if (response.status === 201) {
+                alert('Registration Successful!');
+            } else {
+                alert('Registration Unsuccessful!');
+            }
+
+        },
     },
+    created() {
+        // this.registerUser();
+    }
 
 
 }

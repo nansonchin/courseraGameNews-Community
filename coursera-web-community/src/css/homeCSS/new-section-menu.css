@@ -15,6 +15,7 @@
     max-width: 100%;
     width: 100%;
     object-fit: cover;
+    height: 420px;
 
 }
 .news-details-text-wrapper{
@@ -44,7 +45,14 @@
     color:#A1A1A1;
     font-size: 16px;
     width: 80%;
+    overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
 }
+
+  
 
 .home-category-wrapper{
   display: grid;
