@@ -12,14 +12,16 @@
                             'move-text': isClickedLogin
                         }">Login</h3>
                         <div class="login-textField" v-if="isClickedLogin" @click.stop>
-                            <form>
-                                <input type="text" placeholder="Username" class="login-username"><br>
-                                <input type="text" placeholder="Password" class="login-password"><br>
+                            <form @submit.prevent="loginUser">
+                                <input type="text" placeholder="Username" v-model="checkUser.username"
+                                    class="login-username"><br>
+                                <input type="text" placeholder="Password" v-model="checkUser.password"
+                                    class="login-password"><br>
                                 <input type="checkbox" class="login-remember">
                                 <label class="login-remember-text">Remember Me</label>
                                 <br>
                                 <div class="login-btn-container">
-                                    <button type="button" class="btn btn-danger login-btn">Login</button>
+                                    <button type="submit" class="btn btn-danger login-btn">Login</button>
                                 </div>
                                 <div class="thirdPartyLogin">
                                     <p class="thirdParty-text">OR LOGIN WITH:</p>
@@ -82,6 +84,11 @@ export default {
                 password2nd: '',
                 email: '',
             },
+            checkUser: {
+                username: '',
+                password: '',
+            },
+            allRegisterData: [],
 
         };
     },
@@ -98,7 +105,7 @@ export default {
         async registerUser() {
 
             const response = await axios.post('http://localhost:9999/api/register', this.submitUser);
-            console.log("Checking Resonse :" ,response);
+            console.log("Checking Resonse :", response);
             if (response.status === 403) {
                 alert('User with the same username already exists. Please choose a different username.');
             } else if (response.status === 201) {
@@ -108,9 +115,49 @@ export default {
             }
 
         },
+        async loginUser() {
+            try {
+                const dataResponse = await axios.post('http://localhost:9999/api/login', this.checkUser)
+                if (dataResponse.status === 201) {
+                    alert('Login Successfull');
+                    sessionStorage.setItem('user',JSON.stringify(dataResponse.data),);
+                    sessionStorage.setItem('username',JSON.stringify(dataResponse.data.username));
+
+                  
+                    window.location.href='/';
+                } else {
+                    alert('Invalid Username or Password. Please Try Again');
+                }
+            } catch (error) {
+                console.error('Error During Login', error);
+                if (error.response === 401) {
+                    console.error("Invalid Password", error.response);
+                    alert("Login Failed. Server responded with an error.");
+                } else if (error.request) {
+                    console.error("No response received from the server", error.request);
+                    alert("Login Failed. No response received from the server.");
+                } else {
+                    console.error("Error setting up the request", error.message);
+                    alert("Login Failed. Error setting up the request.");
+                }
+            }
+        }
+        // getRegisterData(){
+        //         const data=axios({
+        //         url:"http://localhost:9999/api/registerData",
+        //         method:'get',
+        //     });
+        //     data.then((response)=>{
+        //         var data=response.data;
+        //         this.allRegisterData=data;
+        //         console.log(this.allRegisterData);
+        //     })
+
+        // },
+
     },
     created() {
-        // this.registerUser();
+        // this.getRegisterData();
     }
 
 

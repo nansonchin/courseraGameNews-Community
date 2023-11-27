@@ -31,8 +31,8 @@ server.get('/api/all', async (req, res) => {
         const allNewsCollection = db.collection('news');
         const allGamesCollection = db.collection('gameDetails')
 
-        const allNewsData=await allNewsCollection.find().toArray();
-        const allGamesData=await allGamesCollection.find().toArray();
+        const allNewsData = await allNewsCollection.find().toArray();
+        const allGamesData = await allGamesCollection.find().toArray();
 
         const combineData = {
             'allGames': allGamesData,
@@ -110,23 +110,59 @@ server.get('/api/game/:gameId', async (req, res) => {
     }
 })
 
-server.post('/api/register',async(req,res)=>{
-    try{
-        const userData=req.body;
-        const registerCollection=db.collection('register');
-        const existingUser=await registerCollection.findOne({username:userData.username});
-        if(existingUser){
-            res.status(403).json({message:'User Exists'});
-        }else{
-            const result=await registerCollection.insertOne(userData);
-            if(result.acknowledged){
-                res.status(201).json({message:'User Registered Successfully'});
-            }else{
-                res.status(500).json({message:'User Registered Failed.'})
+server.get('/api/registerData', async (req, res) => {
+    try {
+        const registerCollection = db.collection('register');
+        const registerDatas = await registerCollection.find().toArray();
+        res.status(200).json(registerDatas);
+    } catch (error) {
+        console.error('Error fetching news => ', error);
+        res.status(500).json({ error: 'An error occurred!' })
+    }
+})
+
+server.post('/api/register', async (req, res) => {
+    try {
+        const userData = req.body;
+        const registerCollection = db.collection('register');
+        const existingUser = await registerCollection.findOne({ username: userData.username });
+        if (existingUser) {
+            res.status(403).json({ message: 'User Exists' });
+        } else {
+            const result = await registerCollection.insertOne(userData);
+            if (result.acknowledged) {
+                res.status(201).json({ message: 'User Registered Successfully' });
+            } else {
+                res.status(500).json({ message: 'User Registered Failed.' })
             }
         }
-    }catch(error){
+    } catch (error) {
         console.error('Error Fetching Register => ', error);
-        res.status(500).json({message:'An Error Occured',error})
+        res.status(500).json({ message: 'An Error Occured', error })
+    }
+})
+
+server.post('/api/login', async (req, res) => {
+    try {
+        const loginData = req.body;
+        const findRegisterCollection = db.collection('register');
+        const existingLogin = await findRegisterCollection.findOne({ username: loginData.username });
+
+        if (existingLogin) {
+            // res.status(403).json({ message: existingLogin.username });
+            // const passwordRegister = await bcrypt.compare(existingLogin.password, loginData.password);
+
+            if (existingLogin.password == loginData.password) {
+                res.status(201).json({ message: "Login Successfully",username:loginData.username });
+            } else {
+                res.status(401).json({ mesasge: "Invalid Password" });
+            }
+        } else {
+            res.status(403).json({ message: "User Not Found Error" });
+
+        }
+    } catch (error) {
+        console.error('Error Login', error);
+        res.status(500).json({ message: 'Error Happend when trying and catching', error })
     }
 })
