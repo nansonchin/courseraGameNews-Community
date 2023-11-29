@@ -3,6 +3,7 @@
 }
 
 .game-category-video-wrapper{
+    height: 40vh;
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -11,6 +12,7 @@
 .game-category-image{
     max-width: 100%;
     width: 100%;
+    height: 100%;
 }
 
 .game-category-title{
@@ -22,6 +24,7 @@
     font-size: 16px;
 }
 .game-category-imageDesc-container{
+    /* height: 0px; */
     position: absolute;
     transition:.2s ease-in;
     padding: 10px;
@@ -29,7 +32,7 @@
 }
 
 .game-category-video-wrapper:hover >.game-category-imageDesc-container{
-    
+    height: auto;
     bottom:0;
     transition:.2s ease-in;
 

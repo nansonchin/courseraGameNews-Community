@@ -102,6 +102,7 @@ export default {
                 this.isClickedLogin = false;
             }
         },
+        
         async registerUser() {
 
             const response = await axios.post('http://localhost:9999/api/register', this.submitUser);

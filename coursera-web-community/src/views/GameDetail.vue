@@ -72,7 +72,7 @@ export default {
             data.then((response)=>{
                 var data =response.data
                 this.gameRandomData_array=data.slice(0,4);
-                console.log(this.gameRandomData_array ," This is game Random ID Data")
+                // console.log(this.gameRandomData_array ," This is game Random ID Data")
             })
         }
     },

@@ -121,6 +121,19 @@ server.get('/api/registerData', async (req, res) => {
     }
 })
 
+// server.get('/api/game/getIndex',async(req,res)=>{
+//     try{
+//         const gameIndexCollection=db.collection(gameDetails);
+//         const documentCount = await gameIndexCollection.countDocuments();
+//         console.log(gameIndexCollection);
+//         res.json(documentCount);
+
+//     }catch(err){
+//         console.error('Error Getting Index');
+//         res.status(500).json({error:'Error Getting Game Index!'})
+//     }
+// });
+
 server.post('/api/register', async (req, res) => {
     try {
         const userData = req.body;

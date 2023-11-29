@@ -59,7 +59,7 @@ export default {
                 var data = response.data
                     // console.log(data);
                     this.newsData_array = data;
-                    console.log(this.newsData_array.side);
+                    // console.log(this.newsData_array.side);
             })
         },
         

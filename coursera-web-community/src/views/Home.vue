@@ -118,7 +118,7 @@ export default {
         this.allGamesData_array=data.allGames;
         this.allNewsData_array=data.allNews;
 
-        console.log(this.allNewsData_array,this.allGamesData_array);
+        // console.log(this.allNewsData_array,this.allGamesData_array);
       })
     }
   },

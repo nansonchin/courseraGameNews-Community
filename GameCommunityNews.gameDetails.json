@@ -1,31 +1,37 @@
 [
   {
-    "gamebgImg": "https://imageio.forbes.com/specials-images/imageserve/641b3572386c48aa680aff98/Counter-Strike-2-Limited-Test-Logo/960x0.jpg?format=jpg&width=960",
+    "gamebgImg":"https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Overwatch2_Season6.png",
     "gameDetail": {
-      "gameImg": "https://i.ytimg.com/vi/cQBx02-zXdE/maxresdefault.jpg",
+      "gameImg": "https://i0.wp.com/clownfishtv.com/wp-content/uploads/2021/12/Gundam-Online-1.jpg?resize=768%2C432&ssl=1",
       "gamesub": {
-        "gimg1": "https://www.nme.com/wp-content/uploads/2023/03/Counter-Strike-2-AWP.jpg",
-        "gimg2": "https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/03/23/ezgif-3-ba3a68b0e1.jpg",
-        "gimg3": "https://gameranx.com/wp-content/uploads/2023/10/what-is-tick-rate-in-counter-strike-2.jpg",
-        "gimg4": "https://insider-gaming.com/wp-content/uploads/2023/03/CSGOFeatured.jpg"
+        "gimg1": "https://www.usatoday.com/gcdn/-mm-/9a10d18443197ab9a2a837953a60ea6375b5467c/c=4-0-1916-1080/local/-/media/2016/06/01/USATODAY/USATODAY/636003815997383719-XBoxOne-1P-PAX16-TRACER-png-jpgcopy.jpg?width=1912&height=1080&fit=crop&format=pjpg&auto=webp",
+        "gimg2": "https://images0.persgroep.net/rcs/FkDXAAiEdHTHCboeL_g4LMssSHw/diocontent/221610057/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8",
+        "gimg3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRepiNTj6xz28bjBXNT1o8msh8_vLkcHcQB9VRm0TrK5zwLe9jDvcdx7jzwDfSnv7NLa5E&usqp=CAU",
+        "gimg4": "https://media.ouest-france.fr/v1/pictures/MjAyMjEwZTU4YWZhZmY0MzdlMTFkMDQ4YTAzYjhkYmZjNmNkZDY?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=db832e79204b939c05438e6475c9bf5e2d153588be9269548335993b0d226dc3"
       },
-      "gameDetailTitle": "Counter Strike GO 2",
-      "gameDetailText":"Counter-Strike 2 is a 2023 multiplayer tactical first-person shooter game developed and published by Valve. It is the fifth main installment of the Counter-Strike series. Developed as an updated version of the previous main entry, Counter-Strike: Global Offensive (2012), it was announced on March 22, 2023 and was released on September 27, 2023, replacing Global Offensive on Steam.
-      Like its predecessor, the game pits two teams, the Counter-Terrorists and the Terrorists, against each other in various objective-based gamemodes. Counter-Strike 2 features major technical improvements over Global Offensive, including a move from the Source game engine to Source 2, improved graphics and new server architecture. In addition, many maps from Global Offensive were updated to use the features of Source 2, with some maps receiving complete overhauls.  
-      Upon release, Counter-Strike 2 received generally favorable reviews from critics. In contrast, player reception was mixed; criticism was directed at the delisting of Global Offensive from Steam, degraded game performance, and the removal of several features that had been present in Global Offensive. As a result, Counter-Strike 2 received hundreds of negative user reviews on Steam, leading to it becoming one of the lowest-rated Valve titles on the platform." 
+      "gameDetailTitle": "OverWatch ",
+      "gameDetailText":"Overwatch (retroactively referred to as Overwatch 1[b]) was a 2016 team-based
+       multiplayer first-person shooter game by Blizzard Entertainment. The game was first released for PlayStation 4,
+      Windows, and Xbox One in May 2016 and Nintendo Switch in October 2019.
+       Cross-platform play was supported across all platforms.
+      Described as a hero shooter, Overwatch assigned players into two teams of six, 
+      with each player selecting from a large roster of characters, known as heroes,
+      with unique abilities. Teams worked to complete map-specific objectives within a limited period of time. 
+      Blizzard added new characters, maps, and game modes post-release, all free of charge, 
+      with the only additional cost to players being optional loot boxes to purchase cosmetic items." 
     },
     "gameSpecContainer": {
       "minSpec": {
-        "mpsec1": "up to Windows 11 ",
-        "mpsec2": "Intel Core i5-750",
-        "mpsec3": " NVIDIA GeForce 610M",
-        "mpsec4": " 8 GB"
+        "mpsec1": "Windows 7/8",
+        "mpsec2": ": Intel Core i3 ",
+        "mpsec3": "GeForce GTX 460",
+        "mpsec4": "4GB RAM "
       },
       "recSpec": {
-        "rspec1": "Windows 10",
-        "rspec2": " Intel Core i7-9700K",
-        "rspec3": "NVIDIA GeForce RTX 2070",
-        "rspec4": "16 GB"
+        "rspec1": " Windows 10 64-bit ",
+        "rspec2": "  Intel Core i5  ",
+        "rspec3": " GeForce GTX 660",
+        "rspec4": "6GB RAM"
       }
     }
   }
