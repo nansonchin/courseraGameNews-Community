@@ -3,7 +3,7 @@
         <div class="gameCategory-wrapper">
             <div class="row">
                 <div class="col col-lg-4 col-md-12 col-sm-12">
-                    <gameCategorySearch />
+                    <gameCategorySearch @filterResults="handleFilterResults" />
                 </div>
                 <div class="col col-lg-8 col-md-12 col-sm-12">
                     <div class="game-category-video-section">
@@ -51,6 +51,7 @@ import gameCategoryVideo from "@/components/gameCategory/gameCategoryVideo.vue"
 
 </script>
 <script>
+
 export default {
     name: 'gameCategory-page',
     props: {
@@ -64,30 +65,31 @@ export default {
         return {
             currentPage: 1,
             totalPageSlice: "",
-            slicedGameData:[],
+            slicedGameData: [],
+            filteredGameData: [],
         }
     },
     methods: {
+        //Change page 1,2,3 function
         async changePage(page) {
             this.currentPage = page;
-            await this.pageDataSeperate(page);
+            await this.pageDataSeperate(page,this._AllCategoryArray_Data);
             // this.pageDataSeperate(page);
             // console.log("Current Page "+this.currentPage);
         },
+
         async loadData() {
-            // Fetch data from your API
+            // Fetch data from API
             try {
                 const response = await this.fetchDataFromAPI();
-                // Now you can safely use this._AllCategoryArray_Data.length
                 this.totalPageSlice = Math.ceil(response.data.length / 9);
-                await this.pageDataSeperate(this.currentPage);
-                console.log("GameData=> " + this.slicedGameData)
-                // console.log( this.totalPageSlice);
-                // Proceed with the rest of your website logic here
+                await this.pageDataSeperate(this.currentPage,this._AllCategoryArray_Data);
+                // console.log("GameData=> " + this.slicedGameData)
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         },
+        //waiting all data for loaded and display
         fetchDataFromAPI() {
             // Replace this with your actual API call using a library like axios or fetch
             return new Promise((resolve) => {
@@ -97,18 +99,40 @@ export default {
                         data: this._AllCategoryArray_Data,
                     };
                     resolve(mockApiResponse);
-                }, 500);
+                }, 700);
             });
         },
-        pageDataSeperate(currentPage) {
+
+        //based on data splice the page function
+        pageDataSeperate(currentPage,pageOrigin) {
             const startIndex = (currentPage - 1) * 9;
             const endIndex = startIndex + 9;
-            return this.slicedGameData = this._AllCategoryArray_Data.slice(startIndex, endIndex);
+            return this.slicedGameData = pageOrigin.slice(startIndex, endIndex);
         },
+
+        // filterDataPageSeperate(currentPage){
+        //     const startIndex = (currentPage - 1) * 9;
+        //     const endIndex = startIndex + 9;
+        //     return this.slicedGameData=this.filteredData.result.slice(startIndex,endIndex);
+        // },
+
+        handleFilterResults(filteredData) {
+            this.slicedGameData = filteredData.result;
+            this.totalPageSlice = Math.ceil(filteredData.result.length / 9);
+            this.pageDataSeperate(this.currentPage,this.filteredData.result);
+            
+
+            console.log("Handling filter results in parent:", filteredData);
+            console.log("Filter Data Slice Data To Look Inside",this.slicedGameData);
+            console.log('See the Length '+ filteredData.result.length);
+            console.log("See The page for filter slice"+this.totalPageSlice);
+            console.log("Filter Data From filter =>" + this.slicedGameData);
+        }
     },
     created() {
         this.loadData();
-    }
+    },
+
 
 }
 </script> 

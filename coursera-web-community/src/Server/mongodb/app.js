@@ -3,6 +3,7 @@ const { connectToDb, getDb } = require('./db');
 const cors = require('cors'); // Import the cors package
 // const { MongoClient } = require('mongodb');
 
+const searchInMoongoDb = require('./moogodb_func');
 
 const server = express();
 server.use(express.json());
@@ -90,6 +91,29 @@ server.get('/api/news/:newsId', async (req, res) => {
     }
 })
 
+server.get('/api/game/search', async(req, res) => {
+    try { 
+        const searchKeyword = req.query.sk;
+        // console.log(searchKeyword)
+        if (searchKeyword != null) {
+            const searchGameCollection = db.collection('gameDetails');
+            // Use a regex to perform a case-insensitive search on the 'gameDetailTitle' field
+            const regex = new RegExp(searchKeyword, 'i');
+            const query = { "gameDetail.gameDetailTitle":  { $regex: regex }  };
+
+            // Retrieve data based on the search query
+            const result = await searchGameCollection.find(query).toArray();
+
+            res.json({ message: 'Search successful', result });
+        } else {
+            // console.log('SearchEnded', searchKeyword);
+            res.status(400).json({ error: 'Search  keyword not provided' });
+        }
+    } catch (error) {
+        console.error('Error that you are facing', error);
+        res.status(500).json({ error: 'there are some error that you are facing!' })
+    }
+});
 server.get('/api/game/:gameId', async (req, res) => {
     try {
         const gameDetailCollection = db.collection('gameDetails');
@@ -120,19 +144,6 @@ server.get('/api/registerData', async (req, res) => {
         res.status(500).json({ error: 'An error occurred!' })
     }
 })
-
-// server.get('/api/game/getIndex',async(req,res)=>{
-//     try{
-//         const gameIndexCollection=db.collection(gameDetails);
-//         const documentCount = await gameIndexCollection.countDocuments();
-//         console.log(gameIndexCollection);
-//         res.json(documentCount);
-
-//     }catch(err){
-//         console.error('Error Getting Index');
-//         res.status(500).json({error:'Error Getting Game Index!'})
-//     }
-// });
 
 server.post('/api/register', async (req, res) => {
     try {
@@ -166,7 +177,7 @@ server.post('/api/login', async (req, res) => {
             // const passwordRegister = await bcrypt.compare(existingLogin.password, loginData.password);
 
             if (existingLogin.password == loginData.password) {
-                res.status(201).json({ message: "Login Successfully",username:loginData.username });
+                res.status(201).json({ message: "Login Successfully", username: loginData.username });
             } else {
                 res.status(401).json({ mesasge: "Invalid Password" });
             }

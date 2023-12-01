@@ -3,7 +3,7 @@
         <div class="container">
             <div class="game-category-text-field-container">
                 <h3 class="game-category-filter"><span class="game-category-fiRedText">Fi</span>lter</h3>
-                <input type="textfield" placeholder="Search" class="game-category-search" />
+                <input type="textfield" placeholder="Search" v-model="filterInput" @keyup.enter="performFilter" @change="performFilter" class="game-category-search" />
             </div>
             <div class="game-category-text-field-container-2ndstage d-flex">
                 <h3 class="game-category-date"><span class="game-category-fiRedText">Da</span>te</h3>
@@ -33,7 +33,34 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
+
 export default {
-    name: "game-CategorySearch-widgets"
+    name: "game-CategorySearch-widgets",
+    data(){
+        return{
+            filterInput:"",
+            filterData_array:[],
+        }
+    },
+    methods:{
+        async performFilter(){
+            const filter=this.filterInput;
+            if(filter){
+                try{
+                    const response = await axios.get(`http://localhost:9999/api/game/search?sk=${encodeURIComponent(filter)}`)
+                    this.filterData_array=response.data;
+                    this.$router.push({path:'/gameCategory/search',query:{sk:filter}});
+                    this.$emit("filterResults",this.filterData_array);
+                    // console.log("Filter_Data Set insidde", this.filterData_array);
+                    // console.log("Filter data successfully passed to parent!");
+                }catch(error){
+                    console.error("Error Performing on Searching",error);
+                }
+            }else{
+                console.warn("Filter Field is empty");
+            }
+        }
+    },
 }
 </script>
