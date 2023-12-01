@@ -127,6 +127,7 @@ export default {
             console.log('See the Length '+ filteredData.result.length);
             console.log("See The page for filter slice"+this.totalPageSlice);
             console.log("Filter Data From filter =>" + this.slicedGameData);
+            console.log("Fuck Emitter from mitt");
         }
     },
     created() {
