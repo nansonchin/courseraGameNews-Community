@@ -3,7 +3,7 @@
         <div class="gameCategory-wrapper">
             <div class="row">
                 <div class="col col-lg-4 col-md-12 col-sm-12">
-                    <gameCategorySearch @filterResults="handleFilterResults"  />
+                    <newCategorySearch @filterNewsResult="handleFilterResults"  />
                 </div>
                 <div class="col col-lg-8 col-md-12 col-sm-12">
                     <div class="game-category-video-section">
@@ -11,7 +11,7 @@
                             <div class="row">
                                 <div class="col col-sm-4 col-lg-4 col-md-4"
                                     v-for="(categoryData, key) in this.slicedGameData" :key="key">
-                                    <gameCategoryVideo :_allGameCategory="categoryData" />
+                                    <newCategoryNews :_allNewCategory="categoryData" />
                                 </div>
                             </div>
                         </div>
@@ -46,10 +46,10 @@
     </div>
 </template>
 <script setup>
-import gameCategorySearch from "@/components/gameCategory/gameCategorySearch.vue"
-import gameCategoryVideo from "@/components/gameCategory/gameCategoryVideo.vue"
-
+import newCategorySearch from "@/components/newCategory/newCategorySearch.vue"
+import newCategoryNews from "@/components/newCategory/newCategoryNews.vue"
 </script>
+
 <script>
 
 export default {
@@ -66,7 +66,7 @@ export default {
             currentPage: 1,
             totalPageSlice: "",
             slicedGameData: [],
-            filteredGameData: [],
+            filteredNewData: [],
         }
     },
     methods: {
@@ -84,7 +84,7 @@ export default {
                 const response = await this.fetchDataFromAPI();
                 this.totalPageSlice = Math.ceil(response.data.length / 9);
                 await this.pageDataSeperate(this.currentPage,this._AllCategoryArray_Data);
-                // console.log("GameData=> " + this.slicedGameData)
+                // console.log("GameData=> " + this.slicedNewData)
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

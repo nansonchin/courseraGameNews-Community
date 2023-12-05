@@ -1,6 +1,6 @@
 [{
-  "title": "News 4",
-  "descImg": "https://cdn.oneesports.gg/cdn-data/2021/08/Zowie_paperrex-1024x576.jpg",
+  "title": "CR Cup Apex",
+  "descImg": "https://i0.wp.com/saiganak.com/wp-content/uploads/2022/05/crazy-raccoon-cup-apex-legends-vol9-01.jpg",
   "descText": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "side": {
     "sideNews": {
@@ -11,13 +11,14 @@
     "sideCategory": {
       "cat1": "Sport",
       "cat2": "FPS",
-      "cat3": "Strategy"
+      "cat3": "Strategy",
+      "cat4": "Skill"
     },
     "sideGallery": {
-      "img1": "https://sm.ign.com/ign_in/screenshot/default/valorant-champions-tour-2023-teams-feature_24kk.jpg",
-      "img2": "https://prod.assets.earlygamecdn.com/images/vct-masters-copenhagen-crowd-768x512.jpg?transform=article_webp",
-      "img3": "https://cdn.sanity.io/images/zoz4y99f/production/c0fb1f5dd041c7954ab5f4b0d8aaf91aaefe82fa-1600x900.jpg?w=1600&auto=format",
-      "img4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq_Gjl8i3q_BPlQac2nIAbgfyjlY63403vmw&usqp=CAU"
+      "img1": "https://i.redd.it/h70wtzxhav461.jpg",
+      "img2": "https://pbs.twimg.com/media/EltgOHpVoAAHCR-.jpg",
+      "img3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReEOB0iF3i_xAWcFaj5qnmg1MyC3yINdKu-w&usqp=CAU",
+      "img4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRum_HBNzxzeaF2fSCpk38kwcMNrqKCRaacKbRNfiIID63y2PD29U2uaSH1J9s0j6MQrRw&usqp=CAU"
     }
   }
 }]

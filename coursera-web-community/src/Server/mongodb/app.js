@@ -91,6 +91,38 @@ server.get('/api/news/:newsId', async (req, res) => {
     }
 })
 
+// server.get('api/game/news/category', async(req,res)=>{
+//     try{
+//         const {s1,s2,s3}=req.query;
+//         const searchGameCategory=db.collection('gameDetails');
+//         const regex=new RegExp({s1,s2,s3},i);
+//         const 
+//         if(s1){
+
+//         }
+//     }   catch(error){
+
+//     }
+// })
+
+server.get('/api/new/search',async(req,res)=>{
+    try{
+        const searchNewWord=req.query.sknew;
+        if(searchNewWord!=null){
+            const searchNewsCollection=db.collection('news');
+            const regex=new RegExp(searchNewWord,'i');
+            const query={"title":{$regex:regex}};
+            const result=await searchNewsCollection.find(query).toArray();
+            res.json({message:"Search News Result Successfully",result});
+        }else{
+            res.status(400).json({error: 'Search  keyword not provided'})
+        }
+    }catch(error){
+        console.error('Error that you are facing', error);
+        res.status(500).json({ error: 'there are some error that you are facing!' }) 
+    }
+})
+
 server.get('/api/game/search', async(req, res) => {
     try { 
         const searchKeyword = req.query.sk;

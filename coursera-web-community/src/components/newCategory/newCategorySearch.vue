@@ -48,10 +48,10 @@ export default {
             const filter=this.filterInput;
             if(filter){
                 try{
-                    const response = await axios.get(`http://localhost:9999/api/game/search?sk=${encodeURIComponent(filter)}`)
+                    const response = await axios.get(`http://localhost:9999/api/new/search?sknew=${encodeURIComponent(filter)}`)
                     this.filterData_array=response.data;
-                    this.$router.push({path:'/gameCategory/search',query:{sk:filter}});
-                    this.$emit("filterResults",this.filterData_array);
+                    // this.$router.push({path:'/newCategory/search',query:{sk:filter}});
+                    this.$emit("filterNewsResult",this.filterData_array);
                     // console.log("Filter_Data Set insidde", this.filterData_array);
                     // console.log("Filter data successfully passed to parent!");
                 }catch(error){

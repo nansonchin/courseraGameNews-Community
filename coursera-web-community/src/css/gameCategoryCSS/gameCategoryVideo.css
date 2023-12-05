@@ -22,6 +22,11 @@
 .game-category-text{
     color:#A1A1A1;
     font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 .game-category-imageDesc-container{
     /* height: 0px; */
